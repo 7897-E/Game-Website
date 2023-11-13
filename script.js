@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const overlay = document.querySelector(".overlay");
 
     // Fetch game data from JSON file
-    fetch('games.json')
+    fetch('games.json' , { mode: 'no-cors' })
         .then(response => response.json())
         .then(games => {
             // Loop through the games array and dynamically create HTML for each game
