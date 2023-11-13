@@ -1,0 +1,15 @@
+[
+  {
+    "title": "10 Minutes Till Dawn",
+    "description": "Survive the night in this thrilling adventure as you navigate through mysterious challenges and unexpected twists.",
+    "image": "10-minutes-till-dawn.jpg",
+    "link": "10-mins-till-dawn.html"
+  },
+  {
+    "title": "Game 2",
+    "description": "Description of Game 2",
+    "image": "game2.jpg",
+    "link": "https://example.com/game2"
+  }
+  // Add entries for other games
+]
