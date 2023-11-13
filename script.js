@@ -41,9 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
         gameElement.appendChild(gameButton);
         gameListContainer.appendChild(gameElement);
 
-        gameButton.addEventListener("mouseenter", function() {
+        gameButton.addEventListener("mouseenter", function(event) {
             overlay.style.display = "block";
             updateOverlayContent(game);
+            positionOverlay(event, gameButton);
         });
 
         gameButton.addEventListener("mouseleave", function() {
@@ -65,5 +66,15 @@ document.addEventListener("DOMContentLoaded", function() {
             <h2>${game.title}</h2>
             <p>${game.description}</p>
         `;
+    }
+
+    function positionOverlay(event, gameButton) {
+        const rect = gameButton.getBoundingClientRect();
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const left = rect.left + window.pageXOffset;
+        const top = rect.bottom + scrollTop;
+
+        overlay.style.left = left + "px";
+        overlay.style.top = top + "px";
     }
 });
