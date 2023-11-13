@@ -1,5 +1,7 @@
 .game {
-    margin: 10px; /* Add some margin for spacing between games */
+    margin: 10px;
+    width:100px;
+    height:100px;/* Add some margin for spacing between games */
 }
 
 .game-button {
