@@ -1,5 +1,10 @@
+.game {
+    margin: 10px; /* Add some margin for spacing between games */
+}
+
 .game-button {
     position: relative;
+    width: 50%; /* Adjust the width as needed */
 }
 
 .tooltip {
