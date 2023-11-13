@@ -26,9 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const gameButton = document.createElement("button");
         gameButton.classList.add("game-button");
-        gameButton.addEventListener("click", function() {
-            window.open(game.link, "_blank");
-        });
 
         const tooltip = document.createElement("div");
         tooltip.classList.add("tooltip");
@@ -50,6 +47,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         gameButton.addEventListener("mouseleave", function() {
+            overlay.style.display = "none";
+        });
+
+        // Adjusted event listeners to prevent flashing
+        overlay.addEventListener("mouseenter", function() {
+            overlay.style.display = "block";
+        });
+
+        overlay.addEventListener("mouseleave", function() {
             overlay.style.display = "none";
         });
     });
