@@ -1,12 +1,8 @@
-.game {
-    margin: 10px;
-    width:100px;
-    height:100px;/* Add some margin for spacing between games */
-}
-
 .game-button {
     position: relative;
-    width: 50%; /* Adjust the width as needed */
+    width: 50%;
+    max-height: 100px; /* Set the maximum height as needed */
+    overflow: hidden; /* Hide content that exceeds the maximum height */
 }
 
 .tooltip {
