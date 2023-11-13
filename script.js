@@ -2,46 +2,57 @@ document.addEventListener("DOMContentLoaded", function() {
     const gameListContainer = document.getElementById("gameList");
     const overlay = document.querySelector(".overlay");
 
-    // Fetch game data from JSON file
-    fetch('games.json' , { method: 'GET', headers: { 'Content-Type': 'application/json' } })
-        .then(response => response.json())
-        .then(games => {
-            // Loop through the games array and dynamically create HTML for each game
-            games.forEach(game => {
-                const gameElement = document.createElement("section");
-                gameElement.classList.add("game");
+    // Sample game data (replace with your actual data)
+    const games = [
+        {
+            title: "10 Minutes Till Dawn",
+            description: "Survive the night in this thrilling adventure as you navigate through mysterious challenges and unexpected twists.",
+            image: "10-minutes-till-dawn.jpg",
+            link: "10-mins-till-dawn.html"
+        },
+        {
+            title: "Game 2",
+            description: "Description of Game 2",
+            image: "game2.jpg",
+            link: "https://example.com/game2"
+        }
+        // Add entries for other games
+    ];
 
-                const gameButton = document.createElement("button");
-                gameButton.classList.add("game-button");
-                gameButton.addEventListener("click", function() {
-                    window.open(game.link, "_blank");
-                });
+    // Loop through the games array and dynamically create HTML for each game
+    games.forEach(game => {
+        const gameElement = document.createElement("section");
+        gameElement.classList.add("game");
 
-                const tooltip = document.createElement("div");
-                tooltip.classList.add("tooltip");
-                tooltip.textContent = game.description;
+        const gameButton = document.createElement("button");
+        gameButton.classList.add("game-button");
+        gameButton.addEventListener("click", function() {
+            window.open(game.link, "_blank");
+        });
 
-                gameButton.innerHTML = `
-                    <img src="${game.image}" alt="${game.title}">
-                    <h2>${game.title}</h2>
-                `;
+        const tooltip = document.createElement("div");
+        tooltip.classList.add("tooltip");
+        tooltip.textContent = game.description;
 
-                gameButton.appendChild(tooltip);
+        gameButton.innerHTML = `
+            <img src="${game.image}" alt="${game.title}">
+            <h2>${game.title}</h2>
+        `;
 
-                gameElement.appendChild(gameButton);
-                gameListContainer.appendChild(gameElement);
+        gameButton.appendChild(tooltip);
 
-                gameButton.addEventListener("mouseenter", function() {
-                    overlay.style.display = "block";
-                    updateOverlayContent(game);
-                });
+        gameElement.appendChild(gameButton);
+        gameListContainer.appendChild(gameElement);
 
-                gameButton.addEventListener("mouseleave", function() {
-                    overlay.style.display = "none";
-                });
-            });
-        })
-        .catch(error => console.error('Error fetching games.json:', error));
+        gameButton.addEventListener("mouseenter", function() {
+            overlay.style.display = "block";
+            updateOverlayContent(game);
+        });
+
+        gameButton.addEventListener("mouseleave", function() {
+            overlay.style.display = "none";
+        });
+    });
 
     function updateOverlayContent(game) {
         overlay.innerHTML = `
