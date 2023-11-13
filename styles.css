@@ -13,10 +13,7 @@
     text-align: center;
     border-radius: 5px;
     padding: 5px;
-    position: absolute;
     z-index: 1000;
-    bottom: 125%;
-    left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
@@ -28,9 +25,6 @@
 }
 
 .overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     width: 300px; /* Adjust the width as needed */
     height: 200px; /* Adjust the height as needed */
