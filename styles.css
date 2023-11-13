@@ -13,6 +13,7 @@
     width: 200px;
     background-color: #333;
     color: #fff;
+    left:100px;
     text-align: center;
     border-radius: 5px;
     padding: 5px;
@@ -35,6 +36,7 @@
     z-index: 999;
     display: none;
     padding: 20px;
+    left:100px;
     text-align: center;
     border-radius: 10px;
 }
