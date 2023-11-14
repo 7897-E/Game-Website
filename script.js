@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
         gameButton.addEventListener("mouseenter", function(event) {
             overlay.style.display = "block";
             updateOverlayContent(game);
-            positionOverlay(event, gameButton);
+            positionOverlay(event, gameButton, overlay);
         });
 
         gameButton.addEventListener("mouseleave", function() {
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    function positionOverlay(event, gameButton) {
+    function positionOverlay(event, gameButton, overlay) {
         const rect = gameButton.getBoundingClientRect();
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
         const left = rect.left + window.pageXOffset;
