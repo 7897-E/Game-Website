@@ -67,15 +67,11 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>${game.description}</p>
         `;
     }
-
-    function positionOverlay(event, gameButton, overlay) {
+function positionOverlay(event, gameButton, overlay) {
     const rect = gameButton.getBoundingClientRect();
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const left = rect.left + window.pageXOffset;
-    const top = rect.bottom + scrollTop + 5; // Added 5 pixels for spacing
 
-    overlay.style.left = left + "px";
-    overlay.style.top = top + "px";
+    overlay.style.left = `${rect.left + window.pageXOffset}px`;
+    overlay.style.top = `${rect.bottom + window.scrollY}px`;
 }
     
 });
