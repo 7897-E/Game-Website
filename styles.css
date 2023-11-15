@@ -12,20 +12,14 @@
     max-height: 100%;
 }
 .tooltip {
-    visibility: hidden;
-    width: 200px;
-    background-color: #333;
-    color: #ffffff; /* Set the text color to white */
+     position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+    padding: 20px;
     text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1000;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
+    border-radius: 10px;
+    color: #fff; /* Ensure text color is white */
 }
 
 .game-button:hover .tooltip {
