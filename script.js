@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
     overlay.style.left = `${rect.left + window.pageXOffset}px`;
-    overlay.style.top = `${rect.bottom + scrollTop -650}px`; // Adjust this value as needed
+    overlay.style.top = `${rect.bottom + scrollTop -500}px`; // Adjust this value as needed
 }
     
 });
