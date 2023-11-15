@@ -70,8 +70,12 @@ document.addEventListener("DOMContentLoaded", function() {
 function positionOverlay(event, gameButton, overlay) {
     const rect = gameButton.getBoundingClientRect();
 
-    overlay.style.left = `${rect.left + window.pageXOffset}px`;
-    overlay.style.top = `${rect.bottom + window.scrollY}px`;
+    const overlayLeft = rect.left + window.pageXOffset + (rect.width / 2) - (overlay.offsetWidth / 2);
+    const overlayTop = rect.bottom + window.scrollY;
+
+    overlay.style.left = `${overlayLeft}px`;
+    overlay.style.top = `${overlayTop}px`;
 }
+
     
 });
