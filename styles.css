@@ -5,18 +5,13 @@
     overflow: hidden;
 }
 
-.game-button img {
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-}
 .tooltip {
      position: relative;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
     display: none;
     padding: 20px;
+    width:50%
     text-align: center;
     border-radius: 10px;
     color: #fff; /* Ensure text color is white */
@@ -32,6 +27,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
     display: none;
+    width:50%
     padding: 20px;
     text-align: center;
     border-radius: 10px;
