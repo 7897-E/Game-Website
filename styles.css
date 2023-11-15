@@ -33,14 +33,13 @@
     opacity: 1;
 }
 
-.overlay{
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 200px;
+.overlay {
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
     display: none;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    color: #fff; /* Ensure text color is white */
 }
