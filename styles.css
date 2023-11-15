@@ -1,7 +1,6 @@
 .game-button {
     position: relative;
     width: 50%;
-    max-height: 100px;
     overflow: hidden;
 }
 
@@ -11,10 +10,10 @@
     z-index: 999;
     display: none;
     padding: 20px;
-    width:50%
+    width:50%;
     text-align: center;
     border-radius: 10px;
-    color: #fff; /* Ensure text color is white */
+    color: #ffffff; /* Ensure text color is white */
 }
 
 .game-button:hover .tooltip {
@@ -27,9 +26,9 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
     display: none;
-    width:50%
+    width:50%;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-    color: #fff; /* Ensure text color is white */
+    color: #ffffff; /* Ensure text color is white */
 }
