@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             title: "10 Minutes Till Dawn",
             description: "Survive the night in this thrilling adventure as you navigate through mysterious challenges and unexpected twists.",
-            image: "10-minutes-till-dawn.jpg",
+            image: "10-mins-till-dawn.jpg",
             link: "10-mins-till-dawn.html"
         },
         {
