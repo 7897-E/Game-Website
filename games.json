@@ -6,6 +6,24 @@
     "link": "10-mins-till-dawn.html"
   },
   {
+    "title":"ngo ",
+    "description": "Description of Game 2",
+    "image": "ngon.jpg",
+    "link": "ngon.html"
+  },
+  {
+    "title": "Vex 5",
+    "description": "Description of Game 2",
+    "image": "vex5.jpg",
+    "link": "vex5.html"
+  },
+  {
+    "title": "Slope",
+    "description": "Description of Game 2",
+    "image": "slope.jpg",
+    "link": "slope.html"
+  },
+  {
     "title": "Game 2",
     "description": "Description of Game 2",
     "image": "game2.jpg",
