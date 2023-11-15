@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const overlayWidth = overlay.offsetWidth;
 
     const left = buttonCenterX - overlayWidth / 2;
-    const top = rect.bottom + scrollTop;
+    const top = rect.bottom + scrollTop - 200; // Adjust this value as needed
 
     overlay.style.left = `${left}px`;
     overlay.style.top = `${top}px`;
