@@ -71,14 +71,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const rect = gameButton.getBoundingClientRect();
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    const buttonCenterX = rect.left + rect.width / 2 + window.pageXOffset;
-    const overlayWidth = overlay.offsetWidth;
-
-    const left = buttonCenterX - overlayWidth / 2 + 50;
-    const top = rect.bottom + scrollTop - 400; // Adjust this value as needed
-
-    overlay.style.left = `${left}px`;
-    overlay.style.top = `${top}px`;
+    overlay.style.left = `${rect.left + window.pageXOffset}px`;
+    overlay.style.top = `${rect.bottom + scrollTop - 200}px`; // Adjust this value as needed
 }
     
 });
